@@ -26,11 +26,11 @@ public class atv {
             String url = "https://onepiece.fandom.com/pt/wiki/Skypiea";
             Document doc = Jsoup.connect(url).get();
             String texto =  doc.body().text(); 
-            String frase = "Frase: "+ "povo de Skypiea";
-            frases.add(frase);
+            String frase = "povo de Skypiea";
+            
 
             int contagemFrase = contarOcorrencias(texto, frase);
-
+            frases.add(frase);
             System.out.println("A frase: " + "[" + frase + "]" + " foi encontrada " + contagemFrase + " vezes.");
             String frasecompl = "A frase: " + "[" + frase + "]" + " foi encontrada " + contagemFrase + " vezes.";
             frases.add(frasecompl);
