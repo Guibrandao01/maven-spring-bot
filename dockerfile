@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /target
 
 # Copiar o JAR compilado para dentro do contêiner
-COPY . .
+COPY /target/projeto-0.0.1-SNAPSHOT.jar app/projeto-0.0.1-SNAPSHOT.jar
 
 # Comando de entrada para executar o aplicativo
-CMD ["java", "-jar", "target/projeto-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app/projeto-0.0.1-SNAPSHOT.jar"]
